@@ -4,12 +4,14 @@
     <string name="app_name">repotest</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    
+
     <string-array name="groups_array">
         <item>UCSD</item>
         <item>UCI</item>
         <item>UCLA</item>
         <item>UCSB</item>
     </string-array>
+
+    <string name="title_activity_score">ScoreActivity</string>
 
 </resources>
