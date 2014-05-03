@@ -16,6 +16,10 @@
         <activity
             android:name="com.example.repotest.MainActivity"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.repotest.LeaderboardActivity"
+            android:label="@string/title_activity_leaderboard" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
