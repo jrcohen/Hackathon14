@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -22,6 +24,10 @@ import android.widget.TextView;
  * well.
  */
 public class LoginActivity extends Activity {
+	
+	public final static String EXTRA_MESSAGE = "com.example.repotest.MESSAGE";
+	public static User mainUser;
+	
 	/**
 	 * A dummy authentication store containing known user names and passwords.
 	 * TODO: remove after connecting to a real authentication system.
@@ -53,8 +59,9 @@ public class LoginActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		setContentView(R.layout.activity_login);
+		
+		
 
 		// Set up the login form.
 		// will change to name verification
@@ -72,17 +79,11 @@ public class LoginActivity extends Activity {
 		// Apply the adapter to the spinner
 		spinner.setAdapter(adapter);
 
+		
 		mLoginFormView = findViewById(R.id.login_form);
 		mLoginStatusView = findViewById(R.id.login_status);
 		mLoginStatusMessageView = (TextView) findViewById(R.id.login_status_message);
 
-		findViewById(R.id.sign_in_button).setOnClickListener(
-				new View.OnClickListener() {
-					@Override
-					public void onClick(View view) {
-						attemptLogin();
-					}
-				});
 	}
 
 	@Override
@@ -92,6 +93,17 @@ public class LoginActivity extends Activity {
 		return true;
 	}
 
+	public void startScoreActivity(View view) {
+		Intent ScoreActivity = new Intent(this, ScoreActivity.class);
+		EditText editText = (EditText) findViewById(R.id.name);
+		String message = editText.getText().toString();
+		ScoreActivity.putExtra(EXTRA_MESSAGE, message);
+		
+		mainUser = new User(message, "UCSD");
+		
+		startActivity(ScoreActivity);		
+	}
+	
 	/**
 	 * Attempts to sign in or register the account specified by the login form.
 	 * If there are form errors (invalid email, missing fields, etc.), the
@@ -189,7 +201,7 @@ public class LoginActivity extends Activity {
 			mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
 		}
 	}
-
+	
 	/**
 	 * Represents an asynchronous login/registration task used to authenticate
 	 * the user.

@@ -10,22 +10,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.os.Build;
 
-public class ScoreActivity extends ActionBarActivity {
+public class BonusPointsActivity extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		//String name = mainUser.getName();
-		TextView textView = new TextView(this);
-		textView.setTextSize(40);
-		//textView.setText(mainUser.userName);
-		
-		setContentView(R.layout.activity_score);
+		setContentView(R.layout.activity_bonus_points);
 
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
@@ -37,7 +29,7 @@ public class ScoreActivity extends ActionBarActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.score, menu);
+		getMenuInflater().inflate(R.menu.bonus_points, menu);
 		return true;
 	}
 
@@ -53,16 +45,11 @@ public class ScoreActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 	
-	public void goToBonusPoints(View view) {
-		Intent BonusPointsActivity = new Intent(this, BonusPointsActivity.class);
-		startActivity(BonusPointsActivity);		
+	public void saveBonusPoints(View view) {
+		Intent ScoreActivity = new Intent(this, ScoreActivity.class);
+		startActivity(ScoreActivity);		
 	}
-	
-	public void goToLeaderboard(View view) {
-		Intent LeaderboardActivity = new Intent(this, LeaderboardActivity.class);
-		startActivity(LeaderboardActivity);		
-	}
-	
+
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */
@@ -74,24 +61,10 @@ public class ScoreActivity extends ActionBarActivity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_score,
+			View rootView = inflater.inflate(R.layout.fragment_bonus_points,
 					container, false);
 			return rootView;
 		}
 	}
-	
-	/*
-	public void startLeaderboardActivity(View view) {
-		Intent LeaderboardActivity = new Intent(this, LeaderboardActivity.class);
-		startActivity(LeaderboardActivity);		
-	}
-	*/
-	
-	/*
-	public void startGPS_Activity(View view) {
-		Intent GPS_Activity = new Intent(this, GPS_Activity.class);
-		startActivity(GPS_Activity);	
-	}
-	*/
 
 }
