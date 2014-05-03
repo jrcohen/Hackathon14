@@ -18,5 +18,6 @@
     </string-array>
 
     <string name="title_activity_score">ScoreActivity</string>
+    <string name="title_activity_bonus_points">BonusPointsActivity</string>
 
 </resources>
