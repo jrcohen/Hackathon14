@@ -10,4 +10,13 @@
     <string name="title_section3">Section 3</string>
     <string name="table_1">Table 1</string>
 
+    <string-array name="groups_array">
+        <item>UCSD</item>
+        <item>UCI</item>
+        <item>UCLA</item>
+        <item>UCSB</item>
+    </string-array>
+
+    <string name="title_activity_score">ScoreActivity</string>
+
 </resources>

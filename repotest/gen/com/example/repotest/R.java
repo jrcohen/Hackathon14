@@ -16,6 +16,9 @@ public final class R {
         public static final int abc_slide_out_bottom=0x7f040004;
         public static final int abc_slide_out_top=0x7f040005;
     }
+    public static final class array {
+        public static final int groups_array=0x7f0c0000;
+    }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -1217,10 +1220,10 @@ containing a value of this type.
         public static final int support_simple_spinner_dropdown_item=0x7f03001f;
     }
     public static final class menu {
-        public static final int leaderboard=0x7f0c0000;
-        public static final int login=0x7f0c0001;
-        public static final int main=0x7f0c0002;
-        public static final int score=0x7f0c0003;
+        public static final int leaderboard=0x7f0d0000;
+        public static final int login=0x7f0d0001;
+        public static final int main=0x7f0d0002;
+        public static final int score=0x7f0d0003;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1263,24 +1266,25 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
-        public static final int action_forgot_password=0x7f0a001a;
+        public static final int action_forgot_password=0x7f0a001b;
         public static final int action_settings=0x7f0a000f;
-        public static final int action_sign_in_register=0x7f0a0018;
-        public static final int action_sign_in_short=0x7f0a0019;
+        public static final int action_sign_in_register=0x7f0a0019;
+        public static final int action_sign_in_short=0x7f0a001a;
         public static final int app_name=0x7f0a000d;
-        public static final int error_field_required=0x7f0a001f;
-        public static final int error_incorrect_password=0x7f0a001e;
-        public static final int error_invalid_email=0x7f0a001c;
-        public static final int error_invalid_password=0x7f0a001d;
+        public static final int error_field_required=0x7f0a0020;
+        public static final int error_incorrect_password=0x7f0a001f;
+        public static final int error_invalid_email=0x7f0a001d;
+        public static final int error_invalid_password=0x7f0a001e;
         public static final int hello_world=0x7f0a000e;
-        public static final int login_progress_signing_in=0x7f0a001b;
+        public static final int login_progress_signing_in=0x7f0a001c;
         /**  Strings related to login 
          */
-        public static final int prompt_name=0x7f0a0016;
-        public static final int select_group=0x7f0a0017;
+        public static final int prompt_name=0x7f0a0017;
+        public static final int select_group=0x7f0a0018;
         public static final int table_1=0x7f0a0014;
         public static final int title_activity_leaderboard=0x7f0a0010;
-        public static final int title_activity_login=0x7f0a0015;
+        public static final int title_activity_login=0x7f0a0016;
+        public static final int title_activity_score=0x7f0a0015;
         public static final int title_section1=0x7f0a0011;
         public static final int title_section2=0x7f0a0012;
         public static final int title_section3=0x7f0a0013;
